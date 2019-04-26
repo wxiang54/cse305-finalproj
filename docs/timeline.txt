@@ -1,0 +1,10 @@
+========================== FORMAT ==========================
+> MM/DD/YYYY [HH:MM optional] -- goal_name
+	* detail 1
+	* detail 2
+	* organize chronologically
+============================================================
+
+... stuff here ...
+
+> 05/05/2019 -- Finalize Project

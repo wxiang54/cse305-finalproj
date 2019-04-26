@@ -1,0 +1,9 @@
+========================== FORMAT ==========================
+name -- MM/DD/YYYY HH:MM
+	* finished thing 1
+	* finished thing 2
+============================================================
+
+william -- 04/26/2019 06:17pm
+	* created devlog template
+
