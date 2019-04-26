@@ -1,10 +1,20 @@
 ========================== FORMAT ==========================
-> MM/DD/YYYY [HH:MM optional] -- goal_name
+> MM/DD/YYYY [HH:MM optional] -- goal_name (person, if applicable)
 	* detail 1
 	* detail 2
 	* organize chronologically
 ============================================================
 
-... stuff here ...
+> 04/26/2019 9pm -- Finish UI mockups (Kristy)
+> 04/26/2019 9pm -- Finish sitemap (Kristy)
 
-> 05/05/2019 -- Finalize Project
+> 04/26/2019 9pm -- DB setup (Ray)
+	* ensure all CREATE statements work
+	* populate each table with 2-3 rows
+
+> 04/26/2019 9pm -- Django project setup (William)
+	* establish bare-bones Django project
+
+
+
+> 05/05/2019 11:59pm -- Finalize Project
