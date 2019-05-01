@@ -1,6 +1,10 @@
-# Temp files
-*~
-*\#
+# Temp/Useless files
+**/*~
+**/*\#
+**/.DS_Store
+
+# Secrets file
+crows_foot/crows_foot/secrets.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
