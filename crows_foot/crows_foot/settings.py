@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from crows_foot.secrets import SECRET_KEY
+from crows_foot.secrets import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -86,9 +86,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoproject',
         'USER': 'root',
-        'PASSWORD': 'Dr9yBshzNE9S',
+        'PASSWORD': DB_PASSWORD,
         'HOST': 'localhost',
-        'PORT': '3306'
+        'PORT': ''
     }
 }
 
