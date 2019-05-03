@@ -150,7 +150,7 @@ CREATE TABLE order_contents (
 insert into order_contents values(1,3);
 insert into order_contents values(1,2);
 
-/************* CATEGORY *************/
+/************* CATEGORY **************/
 CREATE TABLE category (
 	category_name VARCHAR(30),
 	PRIMARY KEY (category_name)
