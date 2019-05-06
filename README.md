@@ -3,7 +3,7 @@ Final project for CSE305 (Spring 2019)
 
 ## Project Overview
 - The name of the Django project is called **crows_foot**. Note that this is the top-level project directory, and inside it there is an app with the same name.
-- In this project there are four "apps", called crows_foot, item_management, order_management, and user_management.
+- In this project there are four so-called "apps":
   - The **crows_foot** app manages the overall function of the entire project, and houses things like settings and configs.
   - The **user_management** app deals with managing users, like the name implies. Responsibilities are user login, registration, account management, session handling, etc.
   - The **item_management** app deals with shopping cart, item stocks, item search, etc.
@@ -17,8 +17,9 @@ Final project for CSE305 (Spring 2019)
 $ python -m pip install requirements.txt
 ```
 3. Set up MySQL local database.
-  - Be sure to name the root user "root".
-4. Create **secrets.py** file in the crows_foot app directory. The contents of this file should be as follows:
+    * MySQL Server downloads for each OS is available [here](https://dev.mysql.com/downloads/mysql/).
+    * During installer setup, be sure that you name of the root user of your local database "root".
+4. Create **secrets.py** file in the crows_foot app directory. The entire contents of this file should be as follows:
 ```py
 SECRET_KEY = '<secret key of django project>'
 DB_PASSWORD = '<password of root user of MySQL db>'
