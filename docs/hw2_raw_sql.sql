@@ -6,11 +6,12 @@ CREATE TABLE item_stock (
 	vendor VARCHAR(50) NOT NULL,
 	price DECIMAL(19,4),
 	quantity INT,
+	description VARCHAR(100),
 	PRIMARY KEY (stock_id)
 );
 
-insert into item_stock values(0, 'pear', 'whole foods', 5.50, 5);
-insert into item_stock values(0, 'potato', 'whole foods', 15.50, 3);
+insert into item_stock values(0, 'pear', 'whole foods', 5.50, 5, 'this is a nice fruit from some country i do not know of.');
+insert into item_stock values(0, 'potato', 'whole foods', 15.50, 3, 'this is a very nice rooty vegetable thing.');
 
 
 /************* ITEM *************/
