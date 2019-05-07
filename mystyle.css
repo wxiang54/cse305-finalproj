@@ -1,0 +1,29 @@
+body{
+  font-family: 'Cormorant Unicase', serif;
+  background-image: url("brick.jpg");
+}
+.navbar{
+  height: 100pt; 
+  background-color: #183059; 
+}
+
+.navbar-light .navbar-brand{
+  position: relative;
+  font-size: 2em;
+  color: gold;  
+}
+.navbar-nav{
+  font-size: 1em;   
+}
+.navbar-light .navbar-nav .nav-link {
+  color:gold;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ffe680;
+}
+#category{
+  margin-left: 2%;
+}
+.container-fluid .row .nav .nav-link{
+  color: gold;
+}
