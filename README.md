@@ -55,7 +55,10 @@ def test(request):  # our new function!
     return render(request, "<your_html_file_here>")
 ```
 4. Add the URL to the **urls.py** file in the **main** app directory.
-
+    * The first string "test/" should be the URL that calls your function in "views.py". It doesn't necessarily have to be called the same thing (e.g. you could define a URL "localhost:8000/foo" that calls the function `bar` in "views.py"), but usually it makes the most sense.
+    * Replace `views.test` with the actual function name you defined in "views.py", like `views.signup` for example.
+    * The name can really be anything, but it's still nice to name the URL something that actually fits.
+    
 ```py
 from django.urls import path
 from . import views
@@ -66,9 +69,5 @@ urlpatterns = [
     path('test/', views.test, name="test"),  # our new URL!
 ]
 ```
-
-    * The first string "test/" should be the URL that calls your function in "views.py". It doesn't necessarily have to be called the same thing (e.g. you could define a URL "localhost:8000/foo" that calls the function `bar` in "views.py"), but usually it makes the most sense.
-    * Replace `views.test` with the actual function name you defined in "views.py", like `views.signup` for example.
-    * The name can really be anything, but it's still nice to name the URL something that actually fits.
 
 5. You should now be able to access your webpage at "localhost:8000/test". If there were errors in serving your page, Django will report them to you on that page.
