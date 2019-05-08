@@ -66,8 +66,8 @@ urlpatterns = [
 ]
 ```
 
-* The first string "test/" should be the URL that calls your function in "views.py". It doesn't necessarily have to be called the same thing (e.g. you could define a URL "localhost:8000/foo" that calls the function `bar` in "views.py"), but usually it makes the most sense.
-* Replace `views.test` with the actual function name you defined in "views.py", like `views.signup` for example.
-* The name can really be anything, but it's still nice to name the URL something that actually fits.
+    * The first string "test/" should be the URL that calls your function in "views.py". It doesn't necessarily have to be called the same thing (e.g. you could define a URL "localhost:8000/foo" that calls the function `bar` in "views.py"), but usually it makes the most sense.
+    * Replace `views.test` with the actual function name you defined in "views.py", like `views.signup` for example.
+    * The name can really be anything, but it's still nice to name the URL something that actually fits.
 
 5. You should now be able to access your webpage at "localhost:8000/test". If there were errors in serving your page, Django will report them to you on that page.
