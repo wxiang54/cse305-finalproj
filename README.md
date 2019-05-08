@@ -38,6 +38,7 @@ $ python manage.py runserver
 ## Development: Defining your own URLs
 In this example, I'll be adding a URL called "/test", so it would be accessed at "localhost:8000/test". However you should use whatever name actually fits the function of the webpage, so if you're making a signup page, then you should call the URL "/signup" or something similar.
 1. Put your .html file in the directory `crows_foot/main/templates/`. The static files (e.g. images) that your .html file relies on should go in `crows_foot/main/static/`.
+    * There is special syntax for loading static files, that uses something like `{% static <your_file> %}`. You can see an example of this in "about.html".
 2. Format your .html file so that it extends the **layout.html** file, and defines the content in the individual blocks.
     * You can see many examples of this in the current templates, like "homepage.html" and "cart.html".
 3. In **views.py**, define the function that you want to be called when you access the "localhost:8000/test" URL in a browser.
