@@ -7,11 +7,12 @@ CREATE TABLE item_stock (
 	price DECIMAL(19,4),
 	quantity INT,
 	description VARCHAR(100),
+	item_image VARCHAR(50),
 	PRIMARY KEY (stock_id)
 );
 
-insert into item_stock values(0, 'pear', 'whole foods', 5.50, 5, 'this is a nice fruit from some country i do not know of.');
-insert into item_stock values(0, 'potato', 'whole foods', 15.50, 3, 'this is a very nice rooty vegetable thing.');
+insert into item_stock values(0, 'pear', 'whole foods', 5.50, 5, 'this is a nice fruit from some country i do not know of.','pear.png');
+insert into item_stock values(0, 'potato', 'whole foods', 15.50, 3, 'this is a very nice rooty vegetable thing.','potato.png');
 
 
 /************* ITEM *************/
