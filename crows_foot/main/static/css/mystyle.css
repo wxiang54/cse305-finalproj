@@ -1,0 +1,43 @@
+body {
+    font-family: 'Cormorant Unicase', serif;
+}
+
+.navbar {
+    background-color: #183059;
+}
+
+.navbar-light .navbar-brand {
+    position: relative;
+    font-size: 2em;
+    color: gold;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.navbar-nav {
+    font-size: 1em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: gold;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffe680;
+}
+
+#category {
+    margin-left: 2%;
+}
+
+.container-fluid .row .nav .nav-link {
+    color: gold;
+}
+
+#blue_ban {
+    width: 102%;
+    height: 35pt;
+    opacity: 0.9;
+    margin-left: -2%;
+    margin-top: -2%;
+}
