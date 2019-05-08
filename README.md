@@ -41,7 +41,7 @@ In this example, I'll be adding a URL called "/test", so it would be accessed at
     * There is special syntax for loading static files, that uses something like `{% static <your_file> %}`. You can see an example of this in "about.html".
 2. Format your .html file so that it extends the **layout.html** file, and defines the content in the individual blocks.
     * You can see many examples of this in the current templates, like "homepage.html" and "cart.html".
-3. In **views.py**, define the function that you want to be called when you access the "localhost:8000/test" URL in a browser.
+3. In **views.py** (in the **main** app directory), define the function that you want to be called when you access the "localhost:8000/test" URL in a browser.
 
 ```py
 from django.shortcuts import render
@@ -54,11 +54,11 @@ def home(request):
 def test(request):  # our new function!
     return render(request, "<your_html_file_here>")
 ```
-4. Add the URL to the **urls.py** file in the **main** app directory.
+4. Add the URL to the **urls.py** file (in the **main** app directory).
     * The first string "test/" should be the URL that calls your function in "views.py". It doesn't necessarily have to be called the same thing (e.g. you could define a URL "localhost:8000/foo" that calls the function `bar` in "views.py"), but usually it makes the most sense.
     * Replace `views.test` with the actual function name you defined in "views.py", like `views.signup` for example.
     * The name can really be anything, but it's still nice to name the URL something that actually fits.
-    
+
 ```py
 from django.urls import path
 from . import views
