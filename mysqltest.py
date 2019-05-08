@@ -1,8 +1,6 @@
-import mysql.connector
-
-cnx = mysql.connector.connect(user='root', password='root',
+import MySQLdb
+cnx = MySQLdb.connect(user='root', password='root',
                               host='localhost', database='storedb')
-
 cursor = cnx.cursor()
 query = ("SELECT * FROM item_stock")
 cursor.execute(query)
