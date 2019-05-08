@@ -1,0 +1,2 @@
+There was a decomposition for ordr table; there was a exp date that only depended on card number. From that, there needed to be a new table where exp date
+was recorded based on only the card number because that is unique.

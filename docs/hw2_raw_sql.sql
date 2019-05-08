@@ -7,7 +7,7 @@ CREATE TABLE item_stock (
 	price DECIMAL(19,4),
 	quantity INT,
 	description VARCHAR(100),
-	item_image VARCHAR(50),
+	item_image_file VARCHAR(50),
 	PRIMARY KEY (stock_id)
 );
 
@@ -47,6 +47,15 @@ insert into customer values(0, 'Will', 'Liam', 'dansgame', '14 Street', 'ayaya@g
 update customer set salt=SUBSTRING(MD5(RAND()), -10);
 update customer set password=sha1(concat(password,salt));
 
+/**PAYMENT**/
+CREATE TABLE card_information (
+	card_number VARCHAR(19),
+	payment_date DATE, 
+	card_exp_month CHAR(2),
+	card_exp_year CHAR(2),
+	PRIMARY KEY (card_number)
+)
+
 /************* ORDER *************/
 CREATE TABLE ordr (
 	ordr_id INT AUTO_INCREMENT,
@@ -54,9 +63,6 @@ CREATE TABLE ordr (
 	customer_id INT NOT NULL,
 	amount DECIMAL(19,4),
 	card_number VARCHAR(19),
-	payment_date DATE, 
-	card_exp_month CHAR(2),
-	card_exp_year CHAR(2),
 	payment_type ENUM('credit', 'paypal', 'debit'),
 	PRIMARY KEY (ordr_id),
 	FOREIGN KEY (customer_id)
@@ -87,9 +93,11 @@ ALTER TABLE ordr
 	REFERENCES shipment(shipment_id)
 	ON DELETE NO ACTION
 	ON UPDATE CASCADE;
-
-insert into ordr values(0, NULL, 1, 10, '101', '1000-01-01', '02', '99', 'credit');
-insert into ordr values(0, NULL, 2, 15, '131', '1003-01-01', '02', '96', 'debit');
+	
+insert into card_information values('101', '1000-01-01', '02', '99');
+insert into card_information values('131', '1003-01-01', '02', '96');
+insert into ordr values(0, NULL, 1, 10, '101', 'credit');
+insert into ordr values(0, NULL, 2, 15, '131', 'debit');
 insert into shipment values(0, 1, 'regular', '1000-01-01', '4523-09-11', 'yes', 'Huntersway');
 insert into shipment values(0, 2, 'worst order ever', '1000-01-01', '9523-09-11', 'ups', 'Hunterjiaway');
 
