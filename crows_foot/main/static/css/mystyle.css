@@ -35,7 +35,12 @@ body {
 
 .container-fluid .row .nav .nav-link {
     color: gold;
-    font-size: 1.3em;
+    font-size: 1.5em;
+    padding: 10px;
+}
+.container-fluid{
+    width: 400px;
+    margin-left: 0%;
 }
 
 #blue_ban {
@@ -44,4 +49,13 @@ body {
     opacity: 0.9;
     margin-left: -2%;
     margin-top: -2%;
+}
+.row{
+    display: flex;
+}
+.insiderow{
+    flex: 1;
+}
+.itemthing{
+    border: solid white 2px;
 }
