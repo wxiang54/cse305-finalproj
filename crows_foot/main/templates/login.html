@@ -13,7 +13,8 @@
         text-align: center;
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         color: gold;
         text-align: center;
     }
@@ -27,20 +28,34 @@
     <div style="width: 100%; display: table-row;">
         <div id="register_labels" style="width: 600px; display: table-cell;">
             <h4> Register </h4>
-            <label> Email: <input type="text" name="em" required /> </label> <br /> <br />
-            <label> Name: <input type="text" name="name" required /> </label> <br /> <br />
-            <label> Address: <input type="text" name="addr" required /> </label> <br /> <br />
-            <label> City: <input type="text" name="city" required /> </label> <br /> <br />
-            <label> State: <input type="text" name="state" required /> </label> <br /> <br />
-            <label> Zip: <input type="number" name="zip" required /> </label> <br /> <br />
-            <button> Register </button>
+            <form method="post" action="/login/" id="register_form">
+                {% csrf_token %}
+                {{ register_form }}
+                <button form="register_form" type="submit" value="submit"> Register </button>
+                <!--
+                <label> Email: <input type="text" name="register_email" required /> </label> <br /> <br />
+                <label> First Name: <input type="text" name="register_fname" required /> </label> <br /> <br />
+                <label> Last Name: <input type="text" name="register_lname" required /> </label> <br /> <br />
+                <label> Full Address: <input type="text" name="register_address" required /> </label> <br /> <br />
+                <button form="register_form" type="submit" value="submit"> Register </button>
+                -->
+            </form>
         </div>
+
+        <div style="width: 100px"></div> <!-- for spacing between forms -->
 
         <div id="login_labels" style="width: 400px; display: table-cell;">
             <h4> Login </h4>
-            <label> Email: <input type="text" name="email" required /> </label> <br /> <br />
-            <label> Password: <input type="text" name="pass" required /> </label> <br /> <br />
-            <button> Login </button>
+            <form method="post" action="/login/" id="login_form">
+                {% csrf_token %}
+                {{ login_form }}
+                <button form="login_form" type="submit" value="submit"> Login </button>
+                <!--
+                <label> Email: <input type="text" name="login_email" required /> </label> <br /> <br />
+                <label> Password: <input type="password" name="login_password" required /> </label> <br /> <br />
+                <button form="login_form" type="submit" value="submit"> Login </button>
+                -->
+            </form>
         </div>
     </div>
 </div>

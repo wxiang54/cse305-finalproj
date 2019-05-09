@@ -20,6 +20,14 @@ def execute_sql_many(sql_list):
         for statement in sql_list:
             cursor.execute(statement)
 
+def dictfetchall(cursor):
+    "Return all rows from a cursor as a dict"
+    columns = [col[0] for col in cursor.description]
+    return [
+        dict(zip(columns, row))
+        for row in cursor.fetchall()
+    ]
+
 def parse_schema(filename=schema_path):
     schema_sql = []
     with open(filename, 'r') as file:
@@ -113,13 +121,33 @@ def parse_insertion_truncate(filename=default_insertiondata_path):
 def insert_item(itemstock_id, was_bought=False):
     with connection.cursor() as cursor:
         cursor.execute("INSERT INTO item(stock_id, was_bought) VALUES(%s, %s);", [itemstock_id, was_bought])
+    return dictfetchall(cursor)
+
+def search_itemstock(keyword=None):
+    if keyword is None:
+        keyword = "%"
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM item_stock WHERE name LIKE %s;", [keyword])
+        data = dictfetchall(cursor)
+    return data
+
+def add_customer():
+    pass
+
+def authenticate_customer():
+    pass
+
+def add_shopping_cart():
+    pass
+
 
 
 if __name__ == "__main__":
     #print(parse_schema("main_schema.sql"))
     #print(parse_schema_drop("main_schema.sql"))
     #print(parse_insertion_itemstocks("default_data.json"))
-    print(parse_insertion_categories("default_data.json"))
+    #print(parse_insertion_categories("default_data.json"))
     #print(parse_insertion_stockcategories("default_data.json"))
     #print(parse_insertion_truncate("default_data.json"))
     #print(parse_insertion_items("default_data.json"))
+    pass

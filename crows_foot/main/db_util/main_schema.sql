@@ -30,7 +30,7 @@ CREATE TABLE customer (
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
 	password VARCHAR(100) NOT NULL,
-	address VARCHAR(50),
+	address VARCHAR(100),
 	email VARCHAR(255),
 	salt VARCHAR(10),
 	PRIMARY KEY (customer_id)
