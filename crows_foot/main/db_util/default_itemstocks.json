@@ -1,7 +1,20 @@
 {
-    "category": [
-        {"category_name": "something"},
-        {"category_name": "something2"}
+    "category": [{
+            "category_name": "something"
+        },
+        {
+            "category_name": "something2"
+        }
+    ],
+
+    "stock_category": [{
+            "stock_id": 1,
+            "category_name": "something"
+        },
+        {
+            "stock_id": 2,
+            "category_name": "something"
+        }
     ],
 
     "item_stock": [{
