@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} About {% endblock %}
+
+{% block custom_style %}
+<style>
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class = 'itempagecontainer'>
+        <img class = 'itempic' src="{% static 'images/upg_sword.png' %}" >
+        <div class='itemname'>SWORD OF SWORDLINESS</div>
+        <div class='pricecontainer'>
+            <div class='itemprice insideprice'>650</div>
+            <img class = 'coinimage insideprice' src="{% static 'images/coin.png' %}">
+        </div>
+        <div class = 'itemdesc'>FILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLERFILLER</div>
+    </div>
+    <div class='itemreviewscontainer'>
+        <div class='review'>
+            <div class='reviewername'>BARBARA LINCOLN</div>
+            <div class="reviewerrating">5/10</div>
+            <div class="reviewtext">THIS PRODUCT WAS THE BEST THING I EVER BOUGHT IN MY ENTIRE LIFE EXCEPT I DIDNT LIKE IT!!!</div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

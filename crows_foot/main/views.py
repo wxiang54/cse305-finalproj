@@ -35,3 +35,6 @@ def orders(request):
 
 def settings(request):
     return render(request, "settings.html")
+
+def item(request):
+    return render(request, "item.html")
