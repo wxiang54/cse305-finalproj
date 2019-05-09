@@ -1,5 +1,4 @@
-
-/************* ITEM STOCK *************/
+/* START */
 CREATE TABLE item_stock (
 	stock_id INT AUTO_INCREMENT,
 	name VARCHAR(50),
@@ -10,12 +9,9 @@ CREATE TABLE item_stock (
 	item_image_file VARCHAR(50),
 	PRIMARY KEY (stock_id)
 );
+/* END */
 
-insert into item_stock values(0, 'pear', 'whole foods', 5.50, 5, 'this is a nice fruit from some country i do not know of.','pear.png');
-insert into item_stock values(0, 'potato', 'whole foods', 15.50, 3, 'this is a very nice rooty vegetable thing.','potato.png');
-
-
-/************* ITEM *************/
+/* START */
 CREATE TABLE item (
 	item_id INT AUTO_INCREMENT,
 	stock_id INT NOT NULL,
@@ -26,11 +22,9 @@ CREATE TABLE item (
 	ON DELETE NO ACTION
 	ON UPDATE CASCADE
 );
+/* END */
 
-insert into item values(0,1,false);
-insert into item values(0,2,false);
-
-/************* CUSTOMER *************/
+/* START */
 CREATE TABLE customer (
 	customer_id INT AUTO_INCREMENT,
 	first_name VARCHAR(50),
@@ -41,21 +35,19 @@ CREATE TABLE customer (
 	salt VARCHAR(10),
 	PRIMARY KEY (customer_id)
 );
+/* END */
 
-insert into customer values(0, 'Petunia', 'Evergreen', 'poggurs', '69 Street', 'poobrain@gmail.com', NULL);
-insert into customer values(0, 'Will', 'Liam', 'dansgame', '14 Street', 'ayaya@gmail.com', NULL);
-update customer set salt=SUBSTRING(MD5(RAND()), -10);
-update customer set password=sha1(concat(password,salt));
-
-/************* CARD_INFORMATION *************/
+/* START */
 CREATE TABLE card_information (
 	card_number VARCHAR(19),
+	payment_date DATE,
 	card_exp_month CHAR(2),
 	card_exp_year CHAR(2),
 	PRIMARY KEY (card_number)
 )
+/* END */
 
-/************* ORDER *************/
+/* START */
 CREATE TABLE ordr (
 	ordr_id INT AUTO_INCREMENT,
 	shipment_id INT,
@@ -69,8 +61,9 @@ CREATE TABLE ordr (
 	ON DELETE CASCADE
 	ON UPDATE CASCADE
 );
+/* END */
 
-/************* SHIPMENT *************/
+/* START */
 CREATE TABLE shipment (
 	shipment_id INT AUTO_INCREMENT,
 	ordr_id INT NOT NULL,
@@ -85,22 +78,18 @@ CREATE TABLE shipment (
 	ON DELETE NO ACTION
 	ON UPDATE CASCADE
 );
+/* END */
 
+/* START */
 ALTER TABLE ordr
 	ADD CONSTRAINT
 	FOREIGN KEY (shipment_id)
 	REFERENCES shipment(shipment_id)
 	ON DELETE NO ACTION
 	ON UPDATE CASCADE;
+/* END */
 
-insert into card_information values('101', '1000-01-01', '02', '99');
-insert into card_information values('131', '1003-01-01', '02', '96');
-insert into ordr values(0, NULL, 1, 10, '101', 'credit');
-insert into ordr values(0, NULL, 2, 15, '131', 'debit');
-insert into shipment values(0, 1, 'regular', '1000-01-01', '4523-09-11', 'yes', 'Huntersway');
-insert into shipment values(0, 2, 'worst order ever', '1000-01-01', '9523-09-11', 'ups', 'Hunterjiaway');
-
-/************* REVIEW *************/
+/* START */
 CREATE TABLE review (
 	rating ENUM('1', '2', '3', '4', '5'),
 	review_text TEXT,
@@ -114,14 +103,11 @@ CREATE TABLE review (
 	REFERENCES customer(customer_id)
 	ON DELETE CASCADE
 	ON UPDATE CASCADE,
-	primary key (customer_id, stock_id)
+	PRIMARY KEY (customer_id, stock_id)
 );
+/* END */
 
-insert into review values('2', 'garbage product would not buy again', 1, 1);
-insert into review values('5', 'omg honey booboo what a steal!!!!!!!', 2, 1);
-
-
-/************* SHOPPING CART *************/
+/* START */
 CREATE TABLE shopping_cart (
 	quantity INT,
 	date_added DATE,
@@ -135,13 +121,11 @@ CREATE TABLE shopping_cart (
 	REFERENCES customer(customer_id)
 	ON DELETE CASCADE
 	ON UPDATE CASCADE,
-	primary key(customer_id, stock_id)
+	PRIMARY KEY (customer_id, stock_id)
 );
+/* END */
 
-insert into shopping_cart values(14, '2011-11-11', 1, 1);
-insert into shopping_cart values(17, '2011-09-21', 2, 1);
-
-/************* ORDER CONTENTS *************/
+/* START */
 CREATE TABLE order_contents (
 	ordr_id INT,
 	item_id INT,
@@ -155,20 +139,16 @@ CREATE TABLE order_contents (
 	ON DELETE NO ACTION
 	ON UPDATE CASCADE
 );
+/* END */
 
-insert into order_contents values(1,3);
-insert into order_contents values(1,2);
-
-/************* CATEGORY **************/
+/* START */
 CREATE TABLE category (
 	category_name VARCHAR(30),
 	PRIMARY KEY (category_name)
 );
+/* END */
 
-insert into category values('fruit');
-insert into category values('games');
-
-/************* ITEM STOCK CATEGORY *************/
+/* START */
 CREATE TABLE stock_category (
 	stock_id INT,
 	category_name VARCHAR(30),
@@ -182,6 +162,4 @@ CREATE TABLE stock_category (
 	ON UPDATE CASCADE,
 	primary key(category_name, stock_id)
 );
-
-insert into stock_category values(1, 'fruit');
-insert into stock_category values(2, 'fruit');
+/* END */
