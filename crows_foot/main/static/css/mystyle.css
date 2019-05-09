@@ -8,14 +8,14 @@ body {
 
 .navbar-light .navbar-brand {
     position: relative;
-    font-size: 2em;
+    font-size: 3em !important;
     color: gold;
     padding-top: 35px;
     padding-bottom: 35px;
 }
 
 .navbar-nav {
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -32,6 +32,7 @@ body {
 
 .container-fluid .row .nav .nav-link {
     color: gold;
+    font-size: 1.3em;
 }
 
 #blue_ban {
