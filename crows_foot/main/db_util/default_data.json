@@ -1,11 +1,35 @@
 {
     "stock_category": [{
             "stock_id": 1,
-            "category_name": "something2"
+            "category_name": "armor"
         },
         {
             "stock_id": 2,
-            "category_name": "something2"
+            "category_name": "spellbooks"
+        },
+        {
+            "stock_id": 3,
+            "category_name": "storage"
+        },
+        {
+            "stock_id": 4,
+            "category_name": "potions"
+        },
+        {
+            "stock_id": 5,
+            "category_name": "weapons"
+        },
+        {
+            "stock_id": 6,
+            "category_name": "charms"
+        },
+        {
+            "stock_id": 7,
+            "category_name": "gems"
+        },
+        {
+            "stock_id": 8,
+            "category_name": "special"
         }
     ],
 
@@ -14,8 +38,32 @@
             "display_name": "Armor"
         },
         {
-            "category_name": "something2",
-            "display_name": "Something 2"
+            "category_name": "spellbooks",
+            "display_name": "Spellbooks"
+        },
+        {
+            "category_name": "storage",
+            "display_name": "Storage"
+        },
+        {
+            "category_name": "potions",
+            "display_name": "Potions"
+        },
+        {
+            "category_name": "weapons",
+            "display_name": "Weapons"
+        },
+        {
+            "category_name": "charms",
+            "display_name": "Charms"
+        },
+        {
+            "category_name": "gems",
+            "display_name": "Gems"
+        },
+        {
+            "category_name": "special",
+            "display_name": "Special"
         }
     ],
 
@@ -29,7 +77,7 @@
             "item_image_file": "armor.png"
         },
         {
-            "stock_id": 2,
+            "stock_id": 1,
             "name": "Armor of Fire Resistance",
             "vendor": "Merlin",
             "price": 500,
@@ -38,7 +86,7 @@
             "item_image_file": "upg_armor.png"
         },
         {
-            "stock_id": 3,
+            "stock_id": 1,
             "name": "Helmet of Deflection",
             "vendor": "Merlin",
             "price": 650,
@@ -47,7 +95,7 @@
             "item_image_file": "helmet.png"
         },
         {
-            "stock_id": 4,
+            "stock_id": 2,
             "name": "Beginner's Tome",
             "vendor": "Merlin",
             "price": 100,
@@ -56,7 +104,7 @@
             "item_image_file": "tome.png"
         },
         {
-            "stock_id": 5,
+            "stock_id": 2,
             "name": "Scroll of Scrying",
             "vendor": "Merlin",
             "price": 500,
@@ -65,7 +113,7 @@
             "item_image_file": "scroll.png"
         },
         {
-            "stock_id": 6,
+            "stock_id": 3,
             "name": "Bag of Holding",
             "vendor": "Merlin",
             "price": 2500,
@@ -74,7 +122,7 @@
             "item_image_file": "backpack.png"
         },
         {
-            "stock_id": 7,
+            "stock_id": 4,
             "name": "Potion of Invisibility",
             "vendor": "Merlin",
             "price": 750,
@@ -83,7 +131,7 @@
             "item_image_file": "potionBlue.png"
         },
         {
-            "stock_id": 8,
+            "stock_id": 4,
             "name": "Elixir of Health",
             "vendor": "Merlin",
             "price": 750,
@@ -92,7 +140,7 @@
             "item_image_file": "potionRed.png"
         },
         {
-            "stock_id": 9,
+            "stock_id": 4,
             "name": "Fire Breathing Potion",
             "vendor": "Merlin",
             "price": 1300,
@@ -101,7 +149,7 @@
             "item_image_file": "potionRed.png"
         },
         {
-            "stock_id": 10,
+            "stock_id": 1,
             "name": "Dragon Scale Shield",
             "vendor": "Merlin",
             "price": 2000,
@@ -110,7 +158,7 @@
             "item_image_file": "upg_shield.png"
         },
         {
-            "stock_id": 11,
+            "stock_id": 5,
             "name": "Wand of Magic Missiles",
             "vendor": "Merlin",
             "price": 600,
@@ -119,7 +167,7 @@
             "item_image_file": "wand.png"
         },
         {
-            "stock_id": 12,
+            "stock_id": 5,
             "name": "Wand of Wild Magic",
             "vendor": "Merlin",
             "price": 350,
@@ -128,7 +176,7 @@
             "item_image_file": "upg_wand.png"
         },
         {
-            "stock_id": 13,
+            "stock_id": 5,
             "name": "Flaming Sword",
             "vendor": "Merlin",
             "price": 500,
@@ -137,7 +185,7 @@
             "item_image_file": "upg_sword.png"
         },
         {
-            "stock_id": 14,
+            "stock_id": 6,
             "name": "Charm of Protection",
             "vendor": "Merlin",
             "price": 1800,
@@ -146,7 +194,7 @@
             "item_image_file": "heart.png"
         },
         {
-            "stock_id": 15,
+            "stock_id": 7,
             "name": "Water Elemental Gem",
             "vendor": "Merlin",
             "price": 2300,
@@ -155,7 +203,7 @@
             "item_image_file": "gemBlue.png"
         },
         {
-            "stock_id": 16,
+            "stock_id": 5,
             "name": "Dagger of Returning",
             "vendor": "Merlin",
             "price": 620,
@@ -164,7 +212,7 @@
             "item_image_file": "dagger.png"
         },
         {
-            "stock_id": 17,
+            "stock_id": 8,
             "name": "Enchanting Hammer",
             "vendor": "Merlin",
             "price": 5000,
@@ -173,7 +221,7 @@
             "item_image_file": "upg_hammer.png"
         },
         {
-            "stock_id": 18,
+            "stock_id": 5,
             "name": "Enlarging Axe",
             "vendor": "Merlin",
             "price": 400,
@@ -182,7 +230,7 @@
             "item_image_file": "axe.png"
         },
         {
-            "stock_id": 19,
+            "stock_id": 5,
             "name": "Flying Sword",
             "vendor": "Merlin",
             "price": 3100,
@@ -191,7 +239,7 @@
             "item_image_file": "sword.png"
         },
         {
-            "stock_id": 20,
+            "stock_id": 5,
             "name": "Bow of Entangling",
             "vendor": "Merlin",
             "price": 350,
@@ -200,7 +248,7 @@
             "item_image_file": "bow.png"
         },
         {
-            "stock_id": 21,
+            "stock_id": 5,
             "name": "Sword of Pot Smashing",
             "vendor": "Merlin",
             "price": 250,
@@ -209,7 +257,7 @@
             "item_image_file": "swordWood.png"
         },
         {
-            "stock_id": 22,
+            "stock_id": 7,
             "name": "Eye of True Sight",
             "vendor": "Merlin",
             "price": 3200,
@@ -218,7 +266,7 @@
             "item_image_file": "gemGreen.png"
         },
         {
-            "stock_id": 23,
+            "stock_id": 1,
             "name": "Helm of Night Vision",
             "vendor": "Merlin",
             "price": 650,
@@ -227,7 +275,7 @@
             "item_image_file": "upg_helmet.png"
         },
         {
-            "stock_id": 24,
+            "stock_id": 5,
             "name": "Thundering Battleaxe",
             "vendor": "Merlin",
             "price": 650,
@@ -236,7 +284,7 @@
             "item_image_file": "upg_axeDouble"
         },
         {
-            "stock_id": 25,
+            "stock_id": 7,
             "name": "Sending Stones",
             "vendor": "Merlin",
             "price": 1000,
@@ -245,7 +293,7 @@
             "item_image_file": "gemRed.png"
         },
         {
-            "stock_id": 26,
+            "stock_id": 5,
             "name": "Wand of Polymorph",
             "vendor": "Merlin",
             "price": 850,
