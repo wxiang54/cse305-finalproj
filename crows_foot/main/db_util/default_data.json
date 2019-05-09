@@ -5,31 +5,103 @@
         },
         {
             "stock_id": 2,
-            "category_name": "spellbooks"
+            "category_name": "armor"
         },
         {
             "stock_id": 3,
-            "category_name": "storage"
+            "category_name": "armor"
         },
         {
             "stock_id": 4,
-            "category_name": "potions"
+            "category_name": "spellbooks"
         },
         {
             "stock_id": 5,
-            "category_name": "weapons"
+            "category_name": "spellbooks"
         },
         {
             "stock_id": 6,
-            "category_name": "charms"
+            "category_name": "storage"
         },
         {
             "stock_id": 7,
-            "category_name": "gems"
+            "category_name": "potions"
         },
         {
             "stock_id": 8,
+            "category_name": "potions"
+        },
+        {
+            "stock_id": 9,
+            "category_name": "potions"
+        },
+        {
+            "stock_id": 10,
+            "category_name": "armor"
+        },
+        {
+            "stock_id": 11,
+            "category_name": "weapons"
+        },
+        {
+            "stock_id": 12,
+            "category_name": "weapons"
+        },
+        {
+            "stock_id": 13,
+            "category_name": "weapons"
+        },
+        {
+            "stock_id": 14,
+            "category_name": "charms"
+        },
+        {
+            "stock_id": 15,
+            "category_name": "gems"
+        },
+        {
+            "stock_id": 16,
+            "category_name": "weapons"
+        },
+        {
+            "stock_id": 17,
             "category_name": "special"
+        },
+        {
+            "stock_id": 18,
+            "category_name": "weapons"
+        },
+        {
+            "stock_id": 19,
+            "category_name": "weapons"
+        },
+        {
+            "stock_id": 20,
+            "category_name": "weapons"
+        },
+        {
+            "stock_id": 21,
+            "category_name": "gems"
+        },
+        {
+            "stock_id": 22,
+            "category_name": "special"
+        },
+        {
+            "stock_id": 23,
+            "category_name": "armor"
+        },
+        {
+            "stock_id": 24,
+            "category_name": "weapons"
+        },
+        {
+            "stock_id": 25,
+            "category_name": "gems"
+        },
+        {
+            "stock_id": 26,
+            "category_name": "weapons"
         }
     ],
 
