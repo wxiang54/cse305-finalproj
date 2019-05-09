@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+    <title> Home </title>
+    <style>
+        #login_labels,
+        #register_labels {
+            color: gold;
+        }
+
+        #table_log {
+            text-align: center;
+        }
+
+        h2,
+        h3 {
+            color: gold;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="login.html"> The Crow's Foot </a>
+    </nav>
+    <div class="blue">
+        <img id="blue_ban" src="blue_banner.png" />
+    </div>
+    <h2> Welcome To The Crow's Foot </h2>
+    <h3> Members Only </h3>
+    <div id="table_log" style="display: table;">
+        <div style="width: 100%; display: table-row;">
+            <div id="register_labels" style="width: 600px; display: table-cell;">
+                <h4> Register </h4>
+                <label> Email: <input type="text" name="em" required /> </label> <br /> <br />
+                <label> Name: <input type="text" name="name" required /> </label> <br /> <br />
+                <label> Address: <input type="text" name="addr" required /> </label> <br /> <br />
+                <label> City: <input type="text" name="city" required /> </label> <br /> <br />
+                <label> State: <input type="text" name="state" required /> </label> <br /> <br />
+                <label> Zip: <input type="number" name="zip" required /> </label> <br /> <br />
+                <button> Register </button>
+            </div>
+
+            <div id="login_labels" style="width: 400px; display: table-cell;">
+                <h4> Login </h4>
+                <label> Email: <input type="text" name="email" required /> </label> <br /> <br />
+                <label> Password: <input type="text" name="pass" required /> </label> <br /> <br />
+                <button> Login </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

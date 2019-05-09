@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block title %} User Settings {% endblock %}
+
+{% block custom_style %}
+<style>
+    h1, h2 {
+        color: gold;
+        font-size: 1.5em;
+    }
+    #title{
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #setting_labels, #change_pass {
+        margin-left: 5%;
+        color: gold;
+    }
+
+    .container-fluid {
+        color: gold;
+    }
+
+    #table_acc{
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1 id = "title"> Settings </h1>
+<div id="table_acc" style="display: table;">
+    <div style="width: 100%; display: table-row;">
+        <div id="setting_labels" style = "width: 600px; display: table-cell;">
+            <h2> Account Information </h2>
+            <label> Email: </label> <br /> <br />
+            <label> Name: </label> <br /> <br />
+            <label> Address: </label> <br /> <br />
+            <label> City: </label> <br /> <br />
+            <label> State: </label> <br /> <br />
+            <label> Zip: </label>
+        </div>
+        <div id = "change_pass" style="width: 600px; display: table-cell;" >
+            <h2> Change Password</h2>
+            <label> Old Password: <input id="old_pass" type="text" name="old_password" required /> </label> <br /> <br />
+            <label> New Password: <input id="new_pass" type="text" name="new_password" required /> </label> <br /> <br />
+            <button> Change </button>
+        </div>
+    </div>
+</div>
+{% endblock content %}
