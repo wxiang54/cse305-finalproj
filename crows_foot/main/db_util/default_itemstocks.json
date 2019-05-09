@@ -4,7 +4,7 @@
         "price": 1500,
         "quantity": 30,
         "description": "Despite being made of heavy metal, this chestplate is enchanted with a magic that completely masks the loud clanking that usually accompanies metal armor.",
-        "image_image_file": "armor.png",
+        "item_image_file": "armor.png",
     },
     {
         "name": "Armor of Fire Resistance",
@@ -12,7 +12,7 @@
         "price": 500,
         "quantity": 12,
         "description": "This set of armor is surprisingly cool to the touch; wearing this allows one to brave extremely hot conditions, such as volcanoes and to be impervious to flames.",
-        "image_image_file": "upg_armor.png",
+        "item_image_file": "upg_armor.png",
     },
 
 
