@@ -3,10 +3,23 @@
 from django.db import migrations
 from ..db_util import db_util
 
+def insert_all(apps, schema_editor):
+    insertions_all = []
+    insertions_all += db_util.parse_insertion_itemstocks()
+    insertions_all += db_util.parse_insertion_categories()
+    insertions_all += db_util.parse_insertion_stockcategories()
+    insertions_all += db_util.parse_insertion_items()
+    db_util.execute_sql_many(insertions_all)
+
+def remove_all(apps, schema_editor):
+    db_util.execute_sql_many(db_util.parse_insertion_truncate())
+
+
 class Migration(migrations.Migration):
 
     dependencies = [
         ('main', '0001_initial'),
     ]
 
-    operations = [migrations.RunSQL(statement) for statement in db_util.parse_insertion_itemstocks()]
+    operations = [migrations.RunPython(insert_all, reverse_code=remove_all)]
+    #operations = [migrations.RunPython(insert_all, reverse_code=migrations.RunPython.noop)]

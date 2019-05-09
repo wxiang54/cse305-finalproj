@@ -3,6 +3,13 @@
 from django.db import migrations
 from ..db_util import db_util
 
+def create_tables(apps, schema_editor):
+    db_util.execute_sql_many(db_util.parse_schema())
+
+def drop_tables(apps, schema_editor):
+    db_util.execute_sql_many(db_util.parse_schema_drop())
+
 class Migration(migrations.Migration):
     dependencies = []
-    operations = [migrations.RunSQL(statement) for statement in db_util.parse_schema()]
+    operations = [migrations.RunPython(create_tables, reverse_code=drop_tables)]
+    #operations = [migrations.RunPython(create_tables, reverse_code=migrations.RunPython.noop)]

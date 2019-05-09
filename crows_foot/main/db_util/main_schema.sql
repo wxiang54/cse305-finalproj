@@ -5,7 +5,7 @@ CREATE TABLE item_stock (
 	vendor VARCHAR(50) NOT NULL,
 	price DECIMAL(19,4),
 	quantity INT,
-	description VARCHAR(100),
+	description TEXT,
 	item_image_file VARCHAR(50),
 	PRIMARY KEY (stock_id)
 );
@@ -82,7 +82,7 @@ CREATE TABLE shipment (
 
 /* START */
 ALTER TABLE ordr
-	ADD CONSTRAINT
+	ADD CONSTRAINT ordr_shipment
 	FOREIGN KEY (shipment_id)
 	REFERENCES shipment(shipment_id)
 	ON DELETE NO ACTION
@@ -144,6 +144,7 @@ CREATE TABLE order_contents (
 /* START */
 CREATE TABLE category (
 	category_name VARCHAR(30),
+    display_name VARCHAR(30),
 	PRIMARY KEY (category_name)
 );
 /* END */
