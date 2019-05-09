@@ -57,5 +57,20 @@ body {
     flex: 1;
 }
 .itemthing{
+    height: 300px;
+    width: 150px;
     border: solid white 2px;
+    background-color: white;
+    text-align: center;
+}
+.itemname{
+    font-size: 1.2em;
+    border: solid black 1px;
+}
+.itempic{
+    border: solid black 1px;
+}
+.itemprice{
+    font-size: 1.3em;
+    border: solid black 1px;
 }
