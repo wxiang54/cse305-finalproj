@@ -57,5 +57,32 @@ body {
     flex: 1;
 }
 .itemthing{
+    height: 350px;
+    width: 150px;
     border: solid white 2px;
+    background-color: white;
+    text-align: center;
+}
+.itemname{
+    font-size: 1.0em;
+}
+.itempic{
+    border: solid black 1px;
+}
+.itemprice{
+    font-size: 1.0em;
+}
+.pricecontainer{
+    display: flex;
+    height: 20px;
+}
+.insideprice{
+    flex:1;
+}
+.coinimage{
+    object-fit: contain;
+    max-width: 20%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
