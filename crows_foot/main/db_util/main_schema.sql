@@ -31,7 +31,7 @@ CREATE TABLE customer (
 	last_name VARCHAR(50),
 	password VARCHAR(100) NOT NULL,
 	address VARCHAR(100),
-	email VARCHAR(255),
+	email VARCHAR(255) UNIQUE,
 	salt VARCHAR(10),
 	PRIMARY KEY (customer_id)
 );

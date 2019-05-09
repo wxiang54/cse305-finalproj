@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib import messages
 from .db_util import db_util
 from .forms import RegisterForm, LoginForm
 
@@ -20,12 +21,35 @@ def cart(request):
 
 def login(request):
     if request.method == 'POST':
-        #< check which action it was >
-        register_form = RegisterForm(request.POST)
-        login_form = LoginForm()
-        if register_form.is_valid():
-            pass
-    else:
+        action = request.POST.get("action")
+        if action == "register":
+            register_form = RegisterForm(request.POST)
+            login_form = LoginForm()
+            if register_form.is_valid():
+                if register_form.cleaned_data.get("password") != register_form.cleaned_data.get("rpassword"):
+                    register_form._errors['rpassword'] = register_form.error_class(['Passwords do not match.'])
+                    del register_form.cleaned_data['rpassword']
+                else:
+                    if db_util.insert_customer(register_form.cleaned_data) != 0:
+                        # unknown error
+                        register_form = RegisterForm()
+                    else:
+                        # customer inserted: redirect to homepage
+                        messages.success(request, "Registration successful. Welcome to the Crow's Foot.")
+                        return redirect('/')
+
+        else:   # assume action is login
+            register_form = RegisterForm()
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                if db_util.authenticate_customer(login_form.cleaned_data):
+                    messages.success(request, "Login successful. Welcome back.")
+                    return redirect('/')
+                else:
+                    login_form._errors['password'] = login_form.error_class(['Incorrect password.'])
+                    del register_form.cleaned_data['password']
+
+    else:   #for get requests, reset the forms
         register_form = RegisterForm()
         login_form = LoginForm()
     return render(request, "login.html", {'register_form': register_form, 'login_form': login_form})

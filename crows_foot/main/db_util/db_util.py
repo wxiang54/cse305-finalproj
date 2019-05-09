@@ -1,6 +1,8 @@
 from django.db import connection
+#from django.contrib.auth.hashers import check_password, make_password
 import os
 import json
+import hashlib, uuid
 
 '''
 def my_custom_sql(self):
@@ -27,6 +29,11 @@ def dictfetchall(cursor):
         dict(zip(columns, row))
         for row in cursor.fetchall()
     ]
+
+def dictfetchone(cursor):
+    "Return one row from a cursor as a dict"
+    columns = [col[0] for col in cursor.description]
+    return dict(zip(columns, cursor.fetchone()))
 
 def parse_schema(filename=schema_path):
     schema_sql = []
@@ -131,11 +138,29 @@ def search_itemstock(keyword=None):
         data = dictfetchall(cursor)
     return data
 
-def add_customer():
-    pass
+def insert_customer(cleaned_data):
+    status = -1
+    salt = uuid.uuid4().hex
+    hashed_pw = hashlib.sha512(cleaned_data.get("password") + salt).hexdigest()
+    address = "{} {}, {} {}".format(cleaned_data.get("street"), cleaned_data.get("city"),\
+    cleaned_data.get("state"), cleaned_data.get("zip"))
+    # TODO: check for repeated emails here
+    with connection.cursor() as cursor:
+        try:
+            cursor.execute("INSERT INTO customer(first_name, last_name, password, address, email, salt) "+\
+            "VALUES(\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", \"{}\");".format(cleaned_data.get("fname"), \
+            cleaned_data.get("lname"), hashed_pw, address, cleaned_data.get("email"), salt))
+            status = 0  # status=0 means successful
+        except:
+            status = 1
+            pass
+    return status
 
-def authenticate_customer():
-    pass
+def authenticate_customer(cleaned_data):   # True if correct credentials, False otherwise
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT password, salt FROM customer WHERE email={};".format(cleaned_data.get("email")))
+        customer_data = dictfetchone(cursor)
+    return hashlib.sha512(password + customer_data["salt"]).hexdigest() == customer_data["password"]
 
 def add_shopping_cart():
     pass
