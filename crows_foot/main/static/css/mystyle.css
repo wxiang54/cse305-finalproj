@@ -39,7 +39,7 @@ body {
     padding: 10px;
 }
 .container-fluid{
-    width: 400px;
+    width: 100%;
     margin-left: 0%;
 }
 
@@ -60,7 +60,9 @@ body {
     height: 180px;
     width: 150px;
     background-color: white;
+    border: solid black 1px;
     text-align: center;
+    margin: 5px;
 }
 .itemname{
     font-size: 1.0em;
