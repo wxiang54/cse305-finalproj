@@ -6,8 +6,3 @@ from ..db_util import db_util
 class Migration(migrations.Migration):
     dependencies = []
     operations = [migrations.RunSQL(statement) for statement in db_util.parse_schema()]
-    '''
-    operations = [
-        migrations.RunSQL('RAW SQL CODE')
-    ]
-    '''

@@ -1,209 +1,242 @@
-[{
-        "name": "Chestplate of Stealth",
-        "vendor": "Merlin",
-        "price": 1500,
-        "quantity": 30,
-        "description": "Despite being made of heavy metal, this chestplate is enchanted with a magic that completely masks the loud clanking that usually accompanies metal armor.",
-        "item_image_file": "armor.png"
-    },
-    {
-        "name": "Armor of Fire Resistance",
-        "vendor": "Merlin",
-        "price": 500,
-        "quantity": 12,
-        "description": "This set of armor is surprisingly cool to the touch; wearing this allows one to brave extremely hot conditions, such as volcanoes and to be impervious to flames.",
-        "item_image_file": "upg_armor.png"
-    },
-    {
-        "name": "Helmet of Deflection",
-        "vendor": "Merlin",
-        "price": 650,
-        "quantity": 12,
-        "description": "This helmet comes with an enchantment that makes it harder for arrows and magic spells to hit you.",
-        "item_image_file": "helmet.png"
-    },
-    {
-        "name": "Beginner's Tome",
-        "vendor": "Merlin",
-        "price": 100,
-        "quantity": 120,
-        "description": "Contains the basic must-know spells for any up-and-coming magic user such as Firebolt, Gust, Light, and everyone's favorite, Prestidigitation (includes a free pouch to hold your spell materials).",
-        "item_image_file": "tome.png"
-    },
-    {
-        "name": "Scroll of Scrying",
-        "vendor": "Merlin",
-        "price": 500,
-        "quantity": 12,
-        "description": "A one-use item that allows the user to see one target of their choice for up to 10 minutes (disclaimer: only works on creatures and objects).",
-        "item_image_file": "scroll.png"
-    },
-    {
-        "name": "Bag of Holding",
-        "vendor": "Merlin",
-        "price": 2500,
-        "quantity": 5,
-        "description": "A magical bag that can hold up to 500 pounds worth of items but still feel like only 15 pounds; simply think of the item you want to retrieve and it will appear in your hand when you reach into the bag (warning: flipping the bag inside out will cause all its contents to fall out).",
-        "item_image_file": "backpack.png"
-    },
-    {
-        "name": "Potion of Invisibility",
-        "vendor": "Merlin",
-        "price": 750,
-        "quantity": 10,
-        "description": "Drinking this potion allows you and any belongings on you to become invisible for 1 hour.",
-        "item_image_file": "potionBlue.png"
-    },
-    {
-        "name": "Elixir of Health",
-        "vendor": "Merlin",
-        "price": 750,
-        "quantity": 10,
-        "description": "One sip of this will cure all diseases, contains 10 sips.",
-        "item_image_file": "potionRed.png"
-    },
-    {
-        "name": "Fire Breathing Potion",
-        "vendor": "Merlin",
-        "price": 1300,
-        "quantity": 3,
-        "description": "This potion allows the user to breath fire up to 15 feet away for 1 hour; we are not responsible for any damage caused by this potion.",
-        "item_image_file": "potionRed.png"
-    },
-    {
-        "name": "Dragon Scale Shield",
-        "vendor": "Merlin",
-        "price": 2000,
-        "quantity": 2,
-        "description": "This shield is made from the hide of a white dragon and is quite good at preventing damage from ice magic and the white dragon's signature frost breath.",
-        "item_image_file": "upg_shield.png"
-    },
-    {
-        "name": "Wand of Magic Missiles",
-        "vendor": "Merlin",
-        "price": 600,
-        "quantity": 22,
-        "description": "Allows the user to shoot up to 10 magical homing missiles per day.",
-        "item_image_file": "wand.png"
-    },
-    {
-        "name": "Wand of Wild Magic",
-        "vendor": "Merlin",
-        "price": 350,
-        "quantity": 50,
-        "description": "Every time it is used, it produces one of many magical effects, including summoning a flock of doves, changing your hair color, turning you into a potted plant, etc.; a great party item!",
-        "item_image_file": "upg_wand.png"
-    },
-    {
-        "name": "Flaming Sword",
-        "vendor": "Merlin",
-        "price": 500,
-        "quantity": 20,
-        "description": "Each swing of this sword causes its edge to burst into flames, not for indoor use.",
-        "item_image_file": "upg_sword.png"
-    },
-    {
-        "name": "Charm of Protection",
-        "vendor": "Merlin",
-        "price": 1800,
-        "quantity": 8,
-        "description": "Forms a protective shell around the wearer for up to 3 hours a day, toggled on and off by a command word(instructions for setting up this command word will be included).",
-        "item_image_file": "heart.png"
-    },
-    {
-        "name": "Water Elemental Gem",
-        "vendor": "Merlin",
-        "price": 2300,
-        "quantity": 5,
-        "description": "Shattering this gem allows one to summon a water elemental that will follow any orders for 8 hours before disappearing.",
-        "item_image_file": "gemBlue.png"
-    },
-    {
-        "name": "Dagger of Returning",
-        "vendor": "Merlin",
-        "price": 620,
-        "quantity": 6,
-        "description": "This dagger will always return to its sheath after 15 seconds.",
-        "item_image_file": "dagger.png"
-    },
-    {
-        "name": "Enchanting Hammer",
-        "vendor": "Merlin",
-        "price": 5000,
-        "quantity": 1,
-        "description": "This hammer is used to apply enchantments to normal weapons either with scrolls or gems; simply insert the scroll or gem into the special slot in the handle and hammer away!",
-        "item_image_file": "upg_hammer.png"
-    },
-    {
-        "name": "Enlarging Axe",
-        "vendor": "Merlin",
-        "price": 400,
-        "quantity": 2,
-        "description": "This axe doubles in size when a command word is spoken; while this doubles range, remember that this will also double its weight!",
-        "item_image_file": "axe.png"
-    },
-    {
-        "name": "Flying Sword",
-        "vendor": "Merlin",
-        "price": 3100,
-        "quantity": 3,
-        "description": "This floating sword is controlled with an enchanted glove, and can move as far as 60 feet away from the glove (instruction manual will be included).",
-        "item_image_file": "sword.png"
-    },
-    {
-        "name": "Bow of Entangling",
-        "vendor": "Merlin",
-        "price": 350,
-        "quantity": 128,
-        "description": "An arrow shot from this bow will turn into a coil of rope and wrap around the target upon impact.",
-        "item_image_file": "bow.png"
-    },
-    {
-        "name": "Sword of Pot Smashing",
-        "vendor": "Merlin",
-        "price": 250,
-        "quantity": 111,
-        "description": "One simple tap with this sword while completely obliterate any pot, regardless of size or material.",
-        "item_image_file": "swordWood.png"
-    },
-    {
-        "name": "Eye of True Sight",
-        "vendor": "Merlin",
-        "price": 3200,
-        "quantity": 2,
-        "description": "Peering into this crystal allows one to see anything or anyone invisible.",
-        "item_image_file": "gemGreen.png"
-    },
-    {
-        "name": "Helm of Night Vision",
-        "vendor": "Merlin",
-        "price": 650,
-        "quantity": 16,
-        "description": "While wearing this helm, one can see in the darkness as if it were daytime.",
-        "item_image_file": "upg_helmet.png"
-    },
-    {
-        "name": "Thundering Battleaxe",
-        "vendor": "Merlin",
-        "price": 650,
-        "quantity": 30,
-        "description": "Swinging this axe will cause a thunderwave that radiates out 15 feet from the wielder(note: we are not responsible for any hearing damage caused by this).",
-        "item_image_file": "upg_axeDouble"
-    },
-    {
-        "name": "Sending Stones",
-        "vendor": "Merlin",
-        "price": 1000,
-        "quantity": 8,
-        "description": "A pair of stones enchanted to allow communication between them, no matter the distance.",
-        "item_image_file": "gemRed.png"
-    },
-    {
-        "name": "Wand of Polymorph",
-        "vendor": "Merlin",
-        "price": 850,
-        "quantity": 10,
-        "description": "Changes a creature into another of your choosing for up to one hour.",
-        "item_image_file": "upg_spear.png"
-    }
-]
+{
+    "category": [
+        {"category_name": "something"},
+        {"category_name": "something2"}
+    ],
+
+    "item_stock": [{
+            "stock_id": 1,
+            "name": "Chestplate of Stealth",
+            "vendor": "Merlin",
+            "price": 1500,
+            "quantity": 30,
+            "description": "Despite being made of heavy metal, this chestplate is enchanted with a magic that completely masks the loud clanking that usually accompanies metal armor.",
+            "item_image_file": "armor.png"
+        },
+        {
+            "stock_id": 2,
+            "name": "Armor of Fire Resistance",
+            "vendor": "Merlin",
+            "price": 500,
+            "quantity": 12,
+            "description": "This set of armor is surprisingly cool to the touch; wearing this allows one to brave extremely hot conditions, such as volcanoes and to be impervious to flames.",
+            "item_image_file": "upg_armor.png"
+        },
+        {
+            "stock_id": 3,
+            "name": "Helmet of Deflection",
+            "vendor": "Merlin",
+            "price": 650,
+            "quantity": 12,
+            "description": "This helmet comes with an enchantment that makes it harder for arrows and magic spells to hit you.",
+            "item_image_file": "helmet.png"
+        },
+        {
+            "stock_id": 4,
+            "name": "Beginner's Tome",
+            "vendor": "Merlin",
+            "price": 100,
+            "quantity": 98,
+            "description": "Contains the basic must-know spells for any up-and-coming magic user such as Firebolt, Gust, Light, and everyone's favorite, Prestidigitation (includes a free pouch to hold your spell materials).",
+            "item_image_file": "tome.png"
+        },
+        {
+            "stock_id": 5,
+            "name": "Scroll of Scrying",
+            "vendor": "Merlin",
+            "price": 500,
+            "quantity": 12,
+            "description": "A one-use item that allows the user to see one target of their choice for up to 10 minutes (disclaimer: only works on creatures and objects).",
+            "item_image_file": "scroll.png"
+        },
+        {
+            "stock_id": 6,
+            "name": "Bag of Holding",
+            "vendor": "Merlin",
+            "price": 2500,
+            "quantity": 5,
+            "description": "A magical bag that can hold up to 500 pounds worth of items but still feel like only 15 pounds; simply think of the item you want to retrieve and it will appear in your hand when you reach into the bag (warning: flipping the bag inside out will cause all its contents to fall out).",
+            "item_image_file": "backpack.png"
+        },
+        {
+            "stock_id": 7,
+            "name": "Potion of Invisibility",
+            "vendor": "Merlin",
+            "price": 750,
+            "quantity": 10,
+            "description": "Drinking this potion allows you and any belongings on you to become invisible for 1 hour.",
+            "item_image_file": "potionBlue.png"
+        },
+        {
+            "stock_id": 8,
+            "name": "Elixir of Health",
+            "vendor": "Merlin",
+            "price": 750,
+            "quantity": 10,
+            "description": "One sip of this will cure all diseases, contains 10 sips.",
+            "item_image_file": "potionRed.png"
+        },
+        {
+            "stock_id": 9,
+            "name": "Fire Breathing Potion",
+            "vendor": "Merlin",
+            "price": 1300,
+            "quantity": 3,
+            "description": "This potion allows the user to breath fire up to 15 feet away for 1 hour; we are not responsible for any damage caused by this potion.",
+            "item_image_file": "potionRed.png"
+        },
+        {
+            "stock_id": 10,
+            "name": "Dragon Scale Shield",
+            "vendor": "Merlin",
+            "price": 2000,
+            "quantity": 2,
+            "description": "This shield is made from the hide of a white dragon and is quite good at preventing damage from ice magic and the white dragon's signature frost breath.",
+            "item_image_file": "upg_shield.png"
+        },
+        {
+            "stock_id": 11,
+            "name": "Wand of Magic Missiles",
+            "vendor": "Merlin",
+            "price": 600,
+            "quantity": 22,
+            "description": "Allows the user to shoot up to 10 magical homing missiles per day.",
+            "item_image_file": "wand.png"
+        },
+        {
+            "stock_id": 12,
+            "name": "Wand of Wild Magic",
+            "vendor": "Merlin",
+            "price": 350,
+            "quantity": 50,
+            "description": "Every time it is used, it produces one of many magical effects, including summoning a flock of doves, changing your hair color, turning you into a potted plant, etc.; a great party item!",
+            "item_image_file": "upg_wand.png"
+        },
+        {
+            "stock_id": 13,
+            "name": "Flaming Sword",
+            "vendor": "Merlin",
+            "price": 500,
+            "quantity": 20,
+            "description": "Each swing of this sword causes its edge to burst into flames, not for indoor use.",
+            "item_image_file": "upg_sword.png"
+        },
+        {
+            "stock_id": 14,
+            "name": "Charm of Protection",
+            "vendor": "Merlin",
+            "price": 1800,
+            "quantity": 8,
+            "description": "Forms a protective shell around the wearer for up to 3 hours a day, toggled on and off by a command word(instructions for setting up this command word will be included).",
+            "item_image_file": "heart.png"
+        },
+        {
+            "stock_id": 15,
+            "name": "Water Elemental Gem",
+            "vendor": "Merlin",
+            "price": 2300,
+            "quantity": 5,
+            "description": "Shattering this gem allows one to summon a water elemental that will follow any orders for 8 hours before disappearing.",
+            "item_image_file": "gemBlue.png"
+        },
+        {
+            "stock_id": 16,
+            "name": "Dagger of Returning",
+            "vendor": "Merlin",
+            "price": 620,
+            "quantity": 6,
+            "description": "This dagger will always return to its sheath after 15 seconds.",
+            "item_image_file": "dagger.png"
+        },
+        {
+            "stock_id": 17,
+            "name": "Enchanting Hammer",
+            "vendor": "Merlin",
+            "price": 5000,
+            "quantity": 0,
+            "description": "This hammer is used to apply enchantments to normal weapons either with scrolls or gems; simply insert the scroll or gem into the special slot in the handle and hammer away!",
+            "item_image_file": "upg_hammer.png"
+        },
+        {
+            "stock_id": 18,
+            "name": "Enlarging Axe",
+            "vendor": "Merlin",
+            "price": 400,
+            "quantity": 2,
+            "description": "This axe doubles in size when a command word is spoken; while this doubles range, remember that this will also double its weight!",
+            "item_image_file": "axe.png"
+        },
+        {
+            "stock_id": 19,
+            "name": "Flying Sword",
+            "vendor": "Merlin",
+            "price": 3100,
+            "quantity": 3,
+            "description": "This floating sword is controlled with an enchanted glove, and can move as far as 60 feet away from the glove (instruction manual will be included).",
+            "item_image_file": "sword.png"
+        },
+        {
+            "stock_id": 20,
+            "name": "Bow of Entangling",
+            "vendor": "Merlin",
+            "price": 350,
+            "quantity": 128,
+            "description": "An arrow shot from this bow will turn into a coil of rope and wrap around the target upon impact.",
+            "item_image_file": "bow.png"
+        },
+        {
+            "stock_id": 21,
+            "name": "Sword of Pot Smashing",
+            "vendor": "Merlin",
+            "price": 250,
+            "quantity": 111,
+            "description": "One simple tap with this sword while completely obliterate any pot, regardless of size or material.",
+            "item_image_file": "swordWood.png"
+        },
+        {
+            "stock_id": 22,
+            "name": "Eye of True Sight",
+            "vendor": "Merlin",
+            "price": 3200,
+            "quantity": 2,
+            "description": "Peering into this crystal allows one to see anything or anyone invisible.",
+            "item_image_file": "gemGreen.png"
+        },
+        {
+            "stock_id": 23,
+            "name": "Helm of Night Vision",
+            "vendor": "Merlin",
+            "price": 650,
+            "quantity": 16,
+            "description": "While wearing this helm, one can see in the darkness as if it were daytime.",
+            "item_image_file": "upg_helmet.png"
+        },
+        {
+            "stock_id": 24,
+            "name": "Thundering Battleaxe",
+            "vendor": "Merlin",
+            "price": 650,
+            "quantity": 30,
+            "description": "Swinging this axe will cause a thunderwave that radiates out 15 feet from the wielder(note: we are not responsible for any hearing damage caused by this).",
+            "item_image_file": "upg_axeDouble"
+        },
+        {
+            "stock_id": 25,
+            "name": "Sending Stones",
+            "vendor": "Merlin",
+            "price": 1000,
+            "quantity": 8,
+            "description": "A pair of stones enchanted to allow communication between them, no matter the distance.",
+            "item_image_file": "gemRed.png"
+        },
+        {
+            "stock_id": 26,
+            "name": "Wand of Polymorph",
+            "vendor": "Merlin",
+            "price": 850,
+            "quantity": 10,
+            "description": "Changes a creature into another of your choosing for up to one hour.",
+            "item_image_file": "upg_spear.png"
+        }
+    ]
+}
