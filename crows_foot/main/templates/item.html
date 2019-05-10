@@ -12,15 +12,21 @@
 {% block content %}
 <div class="container">
     <div class='itempagecontainer'>
-        <img class='itempic' src='/static/images/item_icons/64/{{itemstock.item_image_file}}'>
+        <div class='itemcont'  style='background-image: url("/static/images/wood.jpg");'>
+                <img class='itempic' src='/static/images/item_icons/64/{{itemstock.item_image_file}}'>
         <div class='itemname'>{{itemstock.name}}</div>
         <div class='pricecontainer'>
             <div class='itemprice insideprice'>{{itemstock.price|floatformat:"0"}}</div>
             <img class='coinimage insideprice' src="{% static 'images/item_icons/64/coin.png' %}">
         </div>
         <div class='itemdesc'>{{itemstock.description}}</div>
+        </div>
         <div class='itemreviewscontainer'>
-            <div class='review'>
+            <div class = 'selfreviewcontainer'>
+                <input type = 'text'>
+                <button>Post Review</button>
+            </div>
+            <div class='review'  style='background-image: url("/static/images/paper.jpg");'>
                 <div class='reviewername'>BARBARA LINCOLN</div>
                 <div class="reviewerrating">5/10</div>
                 <div class="reviewtext">THIS PRODUCT WAS THE BEST THING I EVER BOUGHT IN MY ENTIRE LIFE EXCEPT I DIDNT LIKE IT!!!</div>

@@ -88,14 +88,13 @@ body {
     height: auto;
 }
 .itempagecontainer{
-    border: solid white 2px;
-    background-color: white;
     height: 300px;
 }
-.itemreviewscontainer{
+.review{
     border: solid black 2px;
     background-color: white;
 }
 .itemdesc{
     word-wrap: break-word;
+    color: gold;
 }
