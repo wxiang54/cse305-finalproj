@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %} Checkout {% endblock %}
+
+{% block custom_style %}
+
+<style>
+    h1 {
+        color: gold;
+    }
+
+    #checkout {
+        color: gold;
+    }
+    body{
+        text-align: center;
+    }
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+<h1> Checkout</h1>
+<div id="checkout">
+    <label> Email: <input type = "text" required> </label> <br /> <br />
+    <label> Name: <input type = "text" required> </label> <br /> <br />
+    <label> Address: <input type="text" required> </label> <br /> <br />
+    <label> City: <input type="text" required> </label> <br /> <br />
+    <label> State: <input type="text" required> </label> <br /> <br />
+    <label> Zip: <input type="text" required></label>
+</div>
+<button> Complete Order </button>
+
+
+{% endblock content %}

@@ -4,13 +4,50 @@
 
 {% block custom_style %}
 <style>
-    h1, h2 {
+    h1,
+    h2 {
+        color: gold;
+        font-size: 2em;
+    }
+
+    .table {
         color: gold;
         font-size: 1.5em;
     }
+
 </style>
 {% endblock %}
 
 {% block content %}
 <h1>Orders</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"> Order Number </th>
+            <th scope="col"> Item Name </th>
+            <th scope="col"> Price </th>
+            <th scope="col"> Quantity </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row"> 12345</th>
+            <td> Runes </td>
+            <td> 150 </td>
+            <td> 1 </td>
+        </tr>
+        <tr>
+            <th scope="row"> 23456</th>
+            <td> Spellbook </td>
+            <td> 1650 </td>
+            <td> 1 </td>
+        </tr>
+        <tr>
+            <th scope="row"> 62345</th>
+            <td> Love Potion </td>
+            <td> 275 </td>
+            <td> 3 </td>
+        </tr>
+    </tbody>
+</table>
 {% endblock content %}

@@ -72,3 +72,6 @@ def settings(request):
 def item(request):
 
     return render(request, "item.html")
+
+def checkout(request):
+    return render(request, "checkout.html")
