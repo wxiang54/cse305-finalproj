@@ -39,7 +39,7 @@ body {
     padding: 10px;
 }
 .container-fluid{
-    width: 100%;
+    width: 90%;
     margin-left: 0%;
 }
 
@@ -63,6 +63,7 @@ body {
     border: solid black 1px;
     text-align: center;
     margin: 5px;
+    display: inline-block;
 }
 .itemname{
     font-size: 1.0em;
