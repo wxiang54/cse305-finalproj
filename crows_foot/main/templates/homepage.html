@@ -14,6 +14,11 @@
         <li class="nav-item"> <a class="nav-link" href="#"> Spellbooks and Tarot Cards </a> </li>
     </ul>
     <div class='insiderow'>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <br />  <br />
         {% for itemstock in itemstocks %}
         <div class='itemthing' style='background-image: url("static/images/wood.jpg");'>
             <a href="/item/{{itemstock.stock_id}}">
