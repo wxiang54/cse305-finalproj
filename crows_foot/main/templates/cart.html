@@ -6,11 +6,52 @@
 <style>
     h1 {
         color: gold;
+        font-size: 2em;
+    }
+
+    #cart {
+        border: solid white 2px;
+        width: 100%;
+        height: 400px;
+    }
+
+    .table {
+        color: gold;
         font-size: 1.5em;
     }
+
 </style>
 {% endblock %}
 
 {% block content %}
 <h1>Shopping Cart</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"> Item Name </th>
+            <th scope="col"> Price </th>
+            <th scope="col"> Quantity </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row"> Runes </th>
+            <td> 150 </td>
+            <td> 1 </td>
+        </tr>
+        <tr>
+            <th scope="row"> Spellbook </th>
+            <td> 1650 </td>
+            <td> 1 </td>
+        </tr>
+        <tr>
+            <th scope="row"> Love Potion </th>
+            <td> 275 </td>
+            <td> 3 </td>
+        </tr>
+    </tbody>
+</table>
+<button> Checkout </button>
+
+
 {% endblock content %}
