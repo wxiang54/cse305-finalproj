@@ -137,7 +137,7 @@ def search_itemstock(keyword=None, category=[]):
     if keyword is None:
         keyword = "%"
     with connection.cursor() as cursor:
-        cursor.execute("SELECT * FROM item_stock WHERE name LIKE %s;", [keyword])
+        cursor.execute("SELECT * FROM item_stock WHERE LOWER(name) LIKE \"%{}%\";".format(keyword.lower()))
         data = dictfetchall(cursor)
     return data
 

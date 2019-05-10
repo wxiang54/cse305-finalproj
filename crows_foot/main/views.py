@@ -12,9 +12,15 @@ def test(request):
 
 # Create your views here.
 def home(request):
+    oldkeyword = ""
     itemstocks = db_util.search_itemstock()
     categories = db_util.get_categories()
-    return render(request, "homepage.html", {'itemstocks': itemstocks, 'categories': categories})
+    if request.method == 'GET':
+        keyword = request.GET.get("keyword")
+        if keyword:
+            itemstocks = db_util.search_itemstock(keyword=keyword)
+            oldkeyword = keyword
+    return render(request, "homepage.html", {'itemstocks': itemstocks, 'categories': categories, 'oldkeyword': oldkeyword})
 
 def about(request):
     return render(request, "about.html")

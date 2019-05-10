@@ -10,8 +10,8 @@
         {% endfor %}
     </ul>
     <div class='insiderow'>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline" action="/" method="get">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword" value="{{oldkeyword}}">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         <br />  <br />
