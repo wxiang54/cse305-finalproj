@@ -141,6 +141,12 @@ def search_itemstock(keyword=None):
         data = dictfetchall(cursor)
     return data
 
+def get_categories():
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM category;")
+        data = dictfetchall(cursor)
+    return data
+
 def insert_customer(cleaned_data):
     status = -1
     salt = uuid.uuid4().hex
