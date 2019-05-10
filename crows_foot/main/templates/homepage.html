@@ -5,30 +5,26 @@
 {% block content %}
 <div class="row">
     <ul class="nav flex-column flex-nonwrap">
-        <li class="nav-item"> <a class="nav-link" href="#"> Magic Potions and Elixirs </a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#"> Magic Stones </a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#"> Ingredients </a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#"> Runes </a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#"> Monster Eggs </a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#"> Tools </a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#"> Spellbooks and Tarot Cards </a> </li>
+        {% for category in categories %}
+            <li class="nav-item"><a class="nav-link" href="#">{{category.display_name}}</a></li>
+        {% endfor %}
     </ul>
     <div class='insiderow'>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline" action="/" method="get">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword" value="{{oldkeyword}}">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         <br />  <br />
         {% for itemstock in itemstocks %}
         <div class='itemthing' style='background-image: url("static/images/wood.jpg");'>
             <a href="/item/{{itemstock.stock_id}}">
-                <img class='itempic' src='static/images/item_icons/64/{{itemstock.item_image_file}}'>
+                <img class='itempic' src='/static/images/item_icons/64/{{itemstock.item_image_file}}'>
             </a>
             <div class="buyitemcontainer">
                 <div class='itemname'>{{itemstock.name}}</div>
                 <div class='pricecontainer'>
                     <div class='itemprice insideprice'>{{ itemstock.price|floatformat:"0" }}</div>
-                    <img class='coinimage insideprice' src='static/images/coin.png'>
+                    <img class='coinimage insideprice' src='/static/images/item_icons/64/coin.png'>
                 </div>
             </div>
         </div>

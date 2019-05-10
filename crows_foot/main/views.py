@@ -12,8 +12,15 @@ def test(request):
 
 # Create your views here.
 def home(request):
+    oldkeyword = ""
     itemstocks = db_util.search_itemstock()
-    return render(request, "homepage.html", {'itemstocks': itemstocks})
+    categories = db_util.get_categories()
+    if request.method == 'GET':
+        keyword = request.GET.get("keyword")
+        if keyword:
+            itemstocks = db_util.search_itemstock(keyword=keyword)
+            oldkeyword = keyword
+    return render(request, "homepage.html", {'itemstocks': itemstocks, 'categories': categories, 'oldkeyword': oldkeyword})
 
 def about(request):
     return render(request, "about.html")
@@ -24,7 +31,6 @@ def cart(request):
 def login(request):
     if request.method == 'POST':
         action = request.POST.get("action")
-        #print(request.POST)
         if action == "register":
             register_form = RegisterForm(request.POST)
             login_form = LoginForm()
@@ -69,9 +75,11 @@ def orders(request):
 def settings(request):
     return render(request, "settings.html")
 
-def item(request):
-
-    return render(request, "item.html")
-
 def checkout(request):
     return render(request, "checkout.html")
+
+def item(request, stock_id):
+    itemstock_info = db_util.get_itemstock_info(stock_id)
+    #print(itemstock_info)
+    return render(request, "item.html", {'itemstock': itemstock_info})
+
