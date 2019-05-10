@@ -17,9 +17,12 @@ def home(request):
     categories = db_util.get_categories()
     if request.method == 'GET':
         keyword = request.GET.get("keyword")
+        category_name = request.GET.get("category_name")
         if keyword:
             itemstocks = db_util.search_itemstock(keyword=keyword)
             oldkeyword = keyword
+        elif category_name:
+            itemstocks = db_util.search_itemstock(category_name=category_name)
     return render(request, "homepage.html", {'itemstocks': itemstocks, 'categories': categories, 'oldkeyword': oldkeyword})
 
 def about(request):
@@ -82,4 +85,3 @@ def item(request, stock_id):
     itemstock_info = db_util.get_itemstock_info(stock_id)
     #print(itemstock_info)
     return render(request, "item.html", {'itemstock': itemstock_info})
-

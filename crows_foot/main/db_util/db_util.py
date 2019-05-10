@@ -133,11 +133,15 @@ def insert_item(itemstock_id, was_bought=False):
         cursor.execute("INSERT INTO item(stock_id, was_bought) VALUES(%s, %s);", [itemstock_id, was_bought])
     return dictfetchall(cursor)
 
-def search_itemstock(keyword=None, category=[]):
+def search_itemstock(keyword=None, category_name=None):
     if keyword is None:
         keyword = "%"
     with connection.cursor() as cursor:
-        cursor.execute("SELECT * FROM item_stock WHERE LOWER(name) LIKE \"%{}%\";".format(keyword.lower()))
+        if category_name is None:
+            cursor.execute("SELECT * FROM item_stock WHERE LOWER(name) LIKE \"%{}%\";".format(keyword.lower()))
+        else:
+            cursor.execute("SELECT * FROM item_stock JOIN stock_category ON item_stock.stock_id=stock_category.stock_id"\
+             +" AND stock_category.category_name=\"{}\";".format(category_name))
         data = dictfetchall(cursor)
     return data
 
