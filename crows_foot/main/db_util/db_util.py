@@ -162,7 +162,7 @@ def authenticate_customer(cleaned_data):   # True if correct credentials, False 
         customer_data = dictfetchone(cursor)
     if customer_data is None:
         return False
-    return hashlib.sha512(password + customer_data["salt"]).hexdigest() == customer_data["password"]
+    return hashlib.sha512((cleaned_data["password"] + customer_data["salt"]).encode('utf-8')).hexdigest() == customer_data["password"]
 
 def add_shopping_cart():
     pass
