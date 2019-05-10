@@ -29,10 +29,6 @@ body {
     color: gold;
 }
 
-#category {
-    margin-left: 2%;
-}
-
 .container-fluid .row .nav .nav-link {
     color: gold;
     font-size: 1.5em;
@@ -58,7 +54,7 @@ body {
 }
 .itemthing{
     height: 140px;
-    width: 150px;
+    width: 200px;
     background-image: url("static/images/wood.jpg");
     text-align: center;
     margin: 5px;
