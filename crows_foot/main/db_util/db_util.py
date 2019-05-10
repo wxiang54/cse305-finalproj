@@ -144,19 +144,16 @@ def search_itemstock(keyword=None):
 def insert_customer(cleaned_data):
     status = -1
     salt = uuid.uuid4().hex
-    hashed_pw = hashlib.sha512(cleaned_data.get("password") + salt).hexdigest()
+    hashed_pw = hashlib.sha512((cleaned_data.get("password") + salt).encode('utf-8')).hexdigest()
     address = "{} {}, {} {}".format(cleaned_data.get("street"), cleaned_data.get("city"),\
     cleaned_data.get("state"), cleaned_data.get("zip"))
     # TODO: check for repeated emails here
     with connection.cursor() as cursor:
-        try:
-            cursor.execute("INSERT INTO customer(first_name, last_name, password, address, email, salt) "+\
-            "VALUES(\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", \"{}\");".format(cleaned_data.get("fname"), \
-            cleaned_data.get("lname"), hashed_pw, address, cleaned_data.get("email"), salt))
-            status = 0  # status=0 means successful
-        except:
-            status = 1
-            pass
+        cursor.execute("INSERT INTO customer(first_name, last_name, password, address, email, salt) "+\
+        "VALUES(\"{}\", \"{}\", \"{}\", \"{}\", \"{}\", \"{}\");".format(cleaned_data.get("fname"), \
+        cleaned_data.get("lname"), hashed_pw, address, cleaned_data.get("email"), salt))
+        status = 0  # status=0 means successful
+
     return status
 
 def authenticate_customer(cleaned_data):   # True if correct credentials, False otherwise

@@ -29,10 +29,10 @@ CREATE TABLE customer (
 	customer_id INT AUTO_INCREMENT,
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
-	password VARCHAR(100) NOT NULL,
+	password VARCHAR(128) NOT NULL,
 	address VARCHAR(100),
 	email VARCHAR(255) UNIQUE,
-	salt VARCHAR(10),
+	salt VARCHAR(32),
 	PRIMARY KEY (customer_id)
 );
 /* END */

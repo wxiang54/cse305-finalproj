@@ -23,21 +23,23 @@ def cart(request):
 def login(request):
     if request.method == 'POST':
         action = request.POST.get("action")
-        print(request.POST)
+        #print(request.POST)
         if action == "register":
             register_form = RegisterForm(request.POST)
             login_form = LoginForm()
             if register_form.is_valid():
+                print(register_form.cleaned_data)
                 if register_form.cleaned_data.get("password") != register_form.cleaned_data.get("rpassword"):
                     register_form.add_error("rpassword", forms.ValidationError('Passwords do not match.'))
                     #del register_form.cleaned_data['rpassword']
                 else:
                     if db_util.insert_customer(register_form.cleaned_data) != 0:
                         # unknown error
-                        register_form = RegisterForm()
+                        print("error oh no!")
                     else:
                         # customer inserted: redirect to homepage
                         messages.success(request, "Registration successful. Welcome to the Crow's Foot.")
+                        print("successful registration")
                         return redirect('/')
 
         else:   # assume action is login
