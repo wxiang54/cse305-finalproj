@@ -133,7 +133,7 @@ def insert_item(itemstock_id, was_bought=False):
         cursor.execute("INSERT INTO item(stock_id, was_bought) VALUES(%s, %s);", [itemstock_id, was_bought])
     return dictfetchall(cursor)
 
-def search_itemstock(keyword=None):
+def search_itemstock(keyword=None, category=[]):
     if keyword is None:
         keyword = "%"
     with connection.cursor() as cursor:
@@ -170,11 +170,11 @@ def authenticate_customer(cleaned_data):   # True if correct credentials, False 
         return False
     return hashlib.sha512((cleaned_data["password"] + customer_data["salt"]).encode('utf-8')).hexdigest() == customer_data["password"]
 
-def get_item_info(item_id):
+def get_itemstock_info(stock_id):
     with connection.cursor() as cursor:
-        cursor.execute("SELECT * FROM item WHERE item_id={};".format(item_id))
-        item_data = dictfetchone(cursor)
-    return item_data
+        cursor.execute("SELECT * FROM item_stock WHERE stock_id={};".format(stock_id))
+        itemstock_data = dictfetchone(cursor)
+    return itemstock_data
 
 def add_shopping_cart():
     pass

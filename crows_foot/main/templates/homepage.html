@@ -18,13 +18,13 @@
         {% for itemstock in itemstocks %}
         <div class='itemthing' style='background-image: url("static/images/wood.jpg");'>
             <a href="/item/{{itemstock.stock_id}}">
-                <img class='itempic' src='static/images/item_icons/64/{{itemstock.item_image_file}}'>
+                <img class='itempic' src='/static/images/item_icons/64/{{itemstock.item_image_file}}'>
             </a>
             <div class="buyitemcontainer">
                 <div class='itemname'>{{itemstock.name}}</div>
                 <div class='pricecontainer'>
                     <div class='itemprice insideprice'>{{ itemstock.price|floatformat:"0" }}</div>
-                    <img class='coinimage insideprice' src='static/images/coin.png'>
+                    <img class='coinimage insideprice' src='/static/images/item_icons/64/coin.png'>
                 </div>
             </div>
         </div>

@@ -1,0 +1,6 @@
+Django==2.2
+django-localflavor==2.2
+mysqlclient==1.4.2.post1
+python-stdnum==1.11
+pytz==2019.1
+sqlparse==0.3.0

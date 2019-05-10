@@ -25,7 +25,6 @@ def cart(request):
 def login(request):
     if request.method == 'POST':
         action = request.POST.get("action")
-        #print(request.POST)
         if action == "register":
             register_form = RegisterForm(request.POST)
             login_form = LoginForm()
@@ -71,5 +70,6 @@ def settings(request):
     return render(request, "settings.html")
 
 def item(request, stock_id):
-
-    return render(request, "item.html")
+    itemstock_info = db_util.get_itemstock_info(stock_id)
+    #print(itemstock_info)
+    return render(request, "item.html", {'itemstock': itemstock_info})
