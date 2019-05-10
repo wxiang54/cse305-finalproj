@@ -57,22 +57,23 @@ body {
     flex: 1;
 }
 .itemthing{
-    height: 180px;
+    height: 140px;
     width: 150px;
-    background-color: white;
-    border: solid black 1px;
+    background-image: url("static/images/wood.jpg");
     text-align: center;
     margin: 5px;
     display: inline-block;
 }
 .itemname{
     font-size: 1.0em;
+    color: gold;
 }
 .itempic{
     border: solid black 1px;
 }
 .itemprice{
     font-size: 1.0em;
+    color: gold;
     width: 5px;
 }
 .pricecontainer{

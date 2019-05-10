@@ -15,7 +15,7 @@
     </ul>
     <div class='insiderow'>
         {% for itemstock in itemstocks %}
-        <div class='itemthing'>
+        <div class='itemthing' style='background-image: url("static/images/wood.jpg");'>
             <a href="/item/{{itemstock.stock_id}}">
                 <img class='itempic' src='static/images/item_icons/64/{{itemstock.item_image_file}}'>
             </a>
