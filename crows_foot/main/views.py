@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
+from django import forms
 from .db_util import db_util
 from .forms import RegisterForm, LoginForm
 
@@ -22,13 +23,14 @@ def cart(request):
 def login(request):
     if request.method == 'POST':
         action = request.POST.get("action")
+        print(request.POST)
         if action == "register":
             register_form = RegisterForm(request.POST)
             login_form = LoginForm()
             if register_form.is_valid():
                 if register_form.cleaned_data.get("password") != register_form.cleaned_data.get("rpassword"):
-                    register_form._errors['rpassword'] = register_form.error_class(['Passwords do not match.'])
-                    del register_form.cleaned_data['rpassword']
+                    register_form.add_error("rpassword", forms.ValidationError('Passwords do not match.'))
+                    #del register_form.cleaned_data['rpassword']
                 else:
                     if db_util.insert_customer(register_form.cleaned_data) != 0:
                         # unknown error
@@ -43,11 +45,15 @@ def login(request):
             login_form = LoginForm(request.POST)
             if login_form.is_valid():
                 if db_util.authenticate_customer(login_form.cleaned_data):
+                    print("auth success")
                     messages.success(request, "Login successful. Welcome back.")
                     return redirect('/')
                 else:
-                    login_form._errors['password'] = login_form.error_class(['Incorrect password.'])
-                    del register_form.cleaned_data['password']
+                    print("auth fail")
+                    login_form.add_error("password", forms.ValidationError('Password incorrect.'))
+                    #del register_form.cleaned_data['password']
+            else:
+                print("invalid form")
 
     else:   #for get requests, reset the forms
         register_form = RegisterForm()

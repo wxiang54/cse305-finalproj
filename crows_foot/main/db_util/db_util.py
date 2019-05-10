@@ -33,7 +33,10 @@ def dictfetchall(cursor):
 def dictfetchone(cursor):
     "Return one row from a cursor as a dict"
     columns = [col[0] for col in cursor.description]
-    return dict(zip(columns, cursor.fetchone()))
+    if cursor.rowcount > 0:
+        return dict(zip(columns, list(cursor.fetchone())))
+    else:
+        return None
 
 def parse_schema(filename=schema_path):
     schema_sql = []
@@ -158,8 +161,10 @@ def insert_customer(cleaned_data):
 
 def authenticate_customer(cleaned_data):   # True if correct credentials, False otherwise
     with connection.cursor() as cursor:
-        cursor.execute("SELECT password, salt FROM customer WHERE email={};".format(cleaned_data.get("email")))
+        cursor.execute("SELECT password, salt FROM customer WHERE email=\"{}\";".format(cleaned_data.get("email")))
         customer_data = dictfetchone(cursor)
+    if customer_data is None:
+        return False
     return hashlib.sha512(password + customer_data["salt"]).hexdigest() == customer_data["password"]
 
 def add_shopping_cart():

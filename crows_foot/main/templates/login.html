@@ -26,36 +26,56 @@
 <h3> Members Only </h3>
 <div id="table_log" style="display: table;">
     <div style="width: 100%; display: table-row;">
-        <div id="register_labels" style="width: 600px; display: table-cell;">
+        <div id="register_labels" style="width: 600px; display: table-cell;" class="container">
             <h4> Register </h4>
-            <form method="post" action="/login/" id="register_form">
-                {% csrf_token %}
-                {{ register_form }}
-                <button form="register_form" type="submit" value="submit"> Register </button>
-                <!--
+            <div class="row">
+                <form method="post" action="/login/" id="register_form">
+                    {% csrf_token %}
+                    {% for field in register_form.visible_fields %}
+                    <div class="col-sm-12">
+                        {% for efield,error in register_form.errors.items %}
+                        {% if efield == field.name %}{{ error | striptags }}<br>{% endif %}
+                        {% endfor %}
+                        <b>{{ field.label_tag }}</b> -- {{ field }}
+                    </div>
+                    {% endfor %}
+                    <input type="hidden" name="action" value="register">
+                    <button form="register_form" type="submit" value="submit"> Register </button>
+                    <!--
                 <label> Email: <input type="text" name="register_email" required /> </label> <br /> <br />
                 <label> First Name: <input type="text" name="register_fname" required /> </label> <br /> <br />
                 <label> Last Name: <input type="text" name="register_lname" required /> </label> <br /> <br />
                 <label> Full Address: <input type="text" name="register_address" required /> </label> <br /> <br />
                 <button form="register_form" type="submit" value="submit"> Register </button>
                 -->
-            </form>
+                </form>
+            </div>
         </div>
 
         <div style="width: 100px"></div> <!-- for spacing between forms -->
 
-        <div id="login_labels" style="width: 400px; display: table-cell;">
+        <div id="login_labels" style="width: 400px; display: table-cell;" class="container">
             <h4> Login </h4>
-            <form method="post" action="/login/" id="login_form">
-                {% csrf_token %}
-                {{ login_form }}
-                <button form="login_form" type="submit" value="submit"> Login </button>
-                <!--
+            <div class="row">
+                <form method="post" action="/login/" id="login_form">
+                    {% csrf_token %}
+                    {% for field in login_form.visible_fields %}
+                    <div class="col-sm-12">
+                        {% for efield,error in login_form.errors.items %}
+                        {% if efield == field.name %}{{ error | striptags }}<br>{% endif %}
+                        {% endfor %}
+                        <b>{{ field.label_tag }}</b> -- {{ field }}
+                    </div>
+                    {% endfor %}
+                    <input type="hidden" name="action" value="login">
+                    <button form="login_form" type="submit" value="submit"> Login </button>
+                    <!--
                 <label> Email: <input type="text" name="login_email" required /> </label> <br /> <br />
                 <label> Password: <input type="password" name="login_password" required /> </label> <br /> <br />
                 <button form="login_form" type="submit" value="submit"> Login </button>
                 -->
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>
