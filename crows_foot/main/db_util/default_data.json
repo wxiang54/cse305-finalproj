@@ -353,7 +353,7 @@
             "price": 650,
             "quantity": 30,
             "description": "Swinging this axe will cause a thunderwave that radiates out 15 feet from the wielder(note: we are not responsible for any hearing damage caused by this).",
-            "item_image_file": "upg_axeDouble"
+            "item_image_file": "upg_axeDouble.png"
         },
         {
             "stock_id": 25,

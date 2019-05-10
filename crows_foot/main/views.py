@@ -12,7 +12,8 @@ def test(request):
 
 # Create your views here.
 def home(request):
-    return render(request, "homepage.html")
+    itemstocks = db_util.search_itemstock()
+    return render(request, "homepage.html", {'itemstocks': itemstocks})
 
 def about(request):
     return render(request, "about.html")
@@ -69,4 +70,5 @@ def settings(request):
     return render(request, "settings.html")
 
 def item(request):
+
     return render(request, "item.html")

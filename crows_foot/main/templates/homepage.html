@@ -14,102 +14,21 @@
         <li class="nav-item"> <a class="nav-link" href="#"> Spellbooks and Tarot Cards </a> </li>
     </ul>
     <div class='insiderow'>
-            <div class='itemthing'>
-                    <a href = "/item">
-                        <img class = 'itempic' src = 'static/images/upg_sword.png'>
-                    </a>
-                    <div class="buyitemcontainer">
-                        <div class='itemname'>Buy Infinity Edge</div>
-                        <div class='pricecontainer'>
-                            <div class='itemprice insideprice'>650</div>
-                            <img class = 'coinimage insideprice' src='static/images/coin.png'>
-                        </div>
-                    </div>
+        {% for itemstock in itemstocks %}
+        <div class='itemthing'>
+            <a href="/item/{{itemstock.stock_id}}">
+                <img class='itempic' src='static/images/item_icons/64/{{itemstock.item_image_file}}'>
+            </a>
+            <div class="buyitemcontainer">
+                <div class='itemname'>{{itemstock.name}}</div>
+                <div class='pricecontainer'>
+                    <div class='itemprice insideprice'>{{ itemstock.price|floatformat:"0" }}</div>
+                    <img class='coinimage insideprice' src='static/images/coin.png'>
                 </div>
-                <div class='itemthing'>
-                        <a href = "/item">
-                            <img class = 'itempic' src = 'static/images/upg_sword.png'>
-                        </a>
-                        <div class="buyitemcontainer">
-                            <div class='itemname'>Buy Infinity Edge</div>
-                            <div class='pricecontainer'>
-                                <div class='itemprice insideprice'>650</div>
-                                <img class = 'coinimage insideprice' src='static/images/coin.png'>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='itemthing'>
-                            <a href = "/item">
-                                <img class = 'itempic' src = 'static/images/upg_sword.png'>
-                            </a>
-                            <div class="buyitemcontainer">
-                                <div class='itemname'>Buy Infinity Edge</div>
-                                <div class='pricecontainer'>
-                                    <div class='itemprice insideprice'>650</div>
-                                    <img class = 'coinimage insideprice' src='static/images/coin.png'>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='itemthing'>
-                                <a href = "/item">
-                                    <img class = 'itempic' src = 'static/images/upg_sword.png'>
-                                </a>
-                                <div class="buyitemcontainer">
-                                    <div class='itemname'>Buy Infinity Edge</div>
-                                    <div class='pricecontainer'>
-                                        <div class='itemprice insideprice'>650</div>
-                                        <img class = 'coinimage insideprice' src='static/images/coin.png'>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='itemthing'>
-                                    <a href = "/item">
-                                        <img class = 'itempic' src = 'static/images/upg_sword.png'>
-                                    </a>
-                                    <div class="buyitemcontainer">
-                                        <div class='itemname'>Buy Infinity Edge</div>
-                                        <div class='pricecontainer'>
-                                            <div class='itemprice insideprice'>650</div>
-                                            <img class = 'coinimage insideprice' src='static/images/coin.png'>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='itemthing'>
-                                        <a href = "/item">
-                                            <img class = 'itempic' src = 'static/images/upg_sword.png'>
-                                        </a>
-                                        <div class="buyitemcontainer">
-                                            <div class='itemname'>Buy Infinity Edge</div>
-                                            <div class='pricecontainer'>
-                                                <div class='itemprice insideprice'>650</div>
-                                                <img class = 'coinimage insideprice' src='static/images/coin.png'>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='itemthing'>
-                                            <a href = "/item">
-                                                <img class = 'itempic' src = 'static/images/upg_sword.png'>
-                                            </a>
-                                            <div class="buyitemcontainer">
-                                                <div class='itemname'>Buy Infinity Edge</div>
-                                                <div class='pricecontainer'>
-                                                    <div class='itemprice insideprice'>650</div>
-                                                    <img class = 'coinimage insideprice' src='static/images/coin.png'>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='itemthing'>
-                                                <a href = "/item">
-                                                    <img class = 'itempic' src = 'static/images/upg_sword.png'>
-                                                </a>
-                                                <div class="buyitemcontainer">
-                                                    <div class='itemname'>Buy Infinity Edge</div>
-                                                    <div class='pricecontainer'>
-                                                        <div class='itemprice insideprice'>650</div>
-                                                        <img class = 'coinimage insideprice' src='static/images/coin.png'>
-                                                    </div>
-                                                </div>
-                                            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock content %}

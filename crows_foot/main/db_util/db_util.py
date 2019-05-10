@@ -164,6 +164,12 @@ def authenticate_customer(cleaned_data):   # True if correct credentials, False 
         return False
     return hashlib.sha512((cleaned_data["password"] + customer_data["salt"]).encode('utf-8')).hexdigest() == customer_data["password"]
 
+def get_item_info(item_id):
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM item WHERE item_id={};".format(item_id))
+        item_data = dictfetchone(cursor)
+    return item_data
+
 def add_shopping_cart():
     pass
 
