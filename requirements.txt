@@ -1,4 +1,4 @@
-Django==2.2.3
+Django==2.2.13
 django-localflavor==2.2
 mysqlclient==1.4.2.post1
 python-stdnum==1.11
